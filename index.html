@@ -1,0 +1,80 @@
+<html>
+
+<head>
+    <title>川原研NAS 133.71.3.4</title>
+    <meta charset="utf-8">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/mini.css/3.0.1/mini-default.min.css">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <style>
+        h1 {margin-top: 1em;
+        border-top-style: dotted}
+        img {
+            box-shadow: 5px 5px 4px 2px;
+            max-height: 15em;
+        }
+
+        figcaption {
+            margin-top: 5px
+        }
+        cite {
+            font-weight:bold;
+        }
+        pre {
+            font-weight: bold;
+        }
+    </style>
+</head>
+
+<body>
+    <div>😊😊😊😊😊😊😊😊😊😊😊😊😊😊😊😊😊😊😊😊😊😊😊😊😊😊</div>
+    <h1>川原研NAS 133.71.3.4</h1>
+    <p>
+        サポートはMicrosoft Teamsの<a
+            href="https://teams.microsoft.com/l/channel/19%3a4ca861102d1341629a4d6a635dd420b2%40thread.tacv2/%25E6%2583%2585%25E5%25A0%25B1%25E3%2582%25A4%25E3%2583%25B3%25E3%2583%2595%25E3%2583%25A9?groupId=37ee4ea2-6a6d-4a56-9dc5-86ad4b9e3159&tenantId=30a7b72a-28fc-4941-b284-d8e6d8c36bb8">川原研究室情報インフラチャネル</a>で行っております。
+    </p>
+    <p>
+        一般ユーザーは川原研のLDAPに登録されたアカウントで認証しています。
+    </p>
+    <h1>Windowsのエクスプローラーからの利用</h1>
+    <p><cite>\\133.71.3.4\home</cite> で各一般ユーザーのホームディレクトリにアクセスできます。</p>
+    <p><cite>\\133.71.3.4\Public</cite> でPublicディレクトリにアクセスできます。</p>
+    <p><cite>\\133.71.3.4\Web</cite> でWebディレクトリ（このページのHTMLファイルがあるディレクトリ）にアクセスできます。</p>
+    <p>作業のため他のNASのストレージをリモートマウントしていることがあります。無視してください。</p>
+    <figure><img src="explorer.jpg"></figure>
+
+    <h1>Windowsでリモートドライブとしてマウント</h1>
+    <p><cite>net use H: \\133.71.3.4\home</cite> で各一般ユーザーのホームディレクトリをH:ドライブとしてマウントできます。</p>
+    <p><cite>net use P: \\133.71.3.4\Public</cite> でPublicディレクトリをP:ドライブとしてマウントできます。</p>
+    <p><cite>net use W: \\133.71.3.4\Web</cite> でWebディレクトリをW:ドライブとしてマウントできます。</p>
+    <pre>
+        C:\>net use h: \\133.71.3.4\home
+        '133.71.3.4' のユーザー名を入力してください: sasaki
+        133.71.3.4 のパスワードを入力してください:
+        コマンドは正常に終了しました。</pre>
+    <figure>
+        <img src="net-use.jpg">
+    </figure>
+
+    <h1>FTPによるアクセス</h1>
+    <figure><img src="ftp.jpg"></figure>
+
+    <h1>NFSでのマウント</h1>
+    <p>133.71.3.0/24からNFS v2/v3/v4での接続が可能です。</p>
+    <figure><img src="nfs.jpg"></figure>
+
+    <h1>基本性能</h1>
+    <ul>
+        <li>機種 QNAP TS-453Be</li>
+        <li>Intel® Celeron® J3455 quad-core 1.5 GHz (burst 2.3 GHz)</li>
+        <li>RAM SO-DIMM DDR3L 16GB</li>
+        <li>SATA 6Gb/s x 4</li>
+        <li>16TB x 4 RAID6 実効容量 29TB</li>
+        <li>UPS APC RS400 (BR400S-JP)</li>
+    </ul>
+    <h1>関連サイト</h1>
+    <ul>
+        <li><a href="https://klms.cite.ehime-u.ac.jp/">川原研Moodle</a></li>
+    </ul>
+</body>
+
+</html>
